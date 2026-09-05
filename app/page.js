@@ -4,84 +4,72 @@ import { useEffect, useMemo, useState } from "react";
 
 const copy = {
   fa: {
-    nav: [["فروشگاه", "#shop"], ["مسیرها", "#finder"], ["داستان", "#story"]],
-    eyebrow: "JASTLIFE / CURATED OUTDOOR GOODS",
-    title: "کمتر انتخاب کن.\nبهتر بیرون برو.",
-    desc: "تجهیزات سفر، کمپ، دوچرخه و تکنولوژی بیرون؛ انتخاب‌شده با یک معیار ساده: آیا واقعاً ارزش همراه شدن را دارد؟",
-    shop: "دیدن انتخاب‌ها",
-    finder: "JAST Finder",
-    categories: "خرید بر اساس مسیر",
-    new: "انتخاب‌های تازه",
-    newSub: "محصول کمتر، تصمیم بهتر.",
-    darkTitle: "هر چیزی که همراهت می‌آید، باید دلیل خوبی برای بودنش داشته باشد.",
-    darkCopy: "ما به‌جای اضافه کردن صدها کالا، انتخاب را سخت‌تر می‌کنیم. کاربرد، وزن، دوام و تجربه واقعی بیرون فیلترهای اصلی JASTLIFE هستند.",
-    finderTitle: "کجا می‌روی؟",
-    finderCopy: "سناریو را انتخاب کن. ما ضروری‌ها را کوتاه می‌کنیم.",
-    storyTitle: "برای بیرون ساخته شده، نه برای قفسه.",
-    storyCopy: "JASTLIFE بین فروشگاه و راهنما قرار می‌گیرد؛ جایی که محصول و محتوا کنار هم کمک می‌کنند انتخاب بهتری داشته باشی.",
-    read: "بیشتر بخوان",
-    essentials: "چهار دنیای JAST",
-    waitTitle: "اولین Drop را زودتر ببین.",
-    waitCopy: "فقط لانچ‌ها، راهنماهای مهم و انتخاب‌های جدید.",
+    nav: [["فروشگاه", "#edit"], ["مسیرها", "#route"], ["درباره", "#story"]],
+    eyebrow: "JASTLIFE / OUTDOOR GOODS / 2026",
+    title: "کمتر حمل کن.\nبیشتر زندگی کن.",
+    desc: "تجهیزات سفر، کمپ، دوچرخه و تکنولوژی بیرون؛ انتخاب‌شده برای آدم‌هایی که می‌خواهند سبک‌تر حرکت کنند و بهتر بیرون باشند.",
+    primary: "دیدن انتخاب‌ها",
+    secondary: "مسیرت را انتخاب کن",
+    routeKicker: "JAST ROUTE / SMART DISCOVERY",
+    routeTitle: "اول مسیر را انتخاب کن.\nبعد وسیله را.",
+    routeCopy: "به‌جای گشتن بین صدها محصول، از موقعیت واقعی شروع کن. JAST Route ضروری‌ها را برای هر سناریو کوتاه می‌کند.",
+    editTitle: "The JAST Edit",
+    editCopy: "چهار انتخاب برای شروع. نه بیشتر.",
+    storyTitle: "هر چیزی که همراهت می‌آید، باید ارزش وزنش را داشته باشد.",
+    storyCopy: "JASTLIFE درباره داشتن وسایل بیشتر نیست. درباره انتخاب دقیق‌تر، حرکت سبک‌تر و تجربه بهتر بیرون است.",
+    worlds: "چهار دنیا. یک استاندارد.",
+    waitTitle: "Drop 01 را قبل از بقیه ببین.",
+    waitCopy: "لانچ‌ها، راهنماها و انتخاب‌های جدید. کوتاه و مفید.",
     email: "ایمیل شما",
-    join: "عضویت",
+    join: "دسترسی زودهنگام",
     search: "جست‌وجو در JASTLIFE",
-    popular: "پیشنهاد سریع",
   },
   en: {
-    nav: [["Shop", "#shop"], ["Finder", "#finder"], ["Story", "#story"]],
-    eyebrow: "JASTLIFE / CURATED OUTDOOR GOODS",
-    title: "Choose less.\nGo outside better.",
-    desc: "Travel, camping, cycling and outdoor tech selected with one simple test: is it truly worth carrying?",
-    shop: "Explore the edit",
-    finder: "JAST Finder",
-    categories: "Shop by activity",
-    new: "Fresh picks",
-    newSub: "Fewer products. Better decisions.",
-    darkTitle: "Everything you carry should earn its place.",
-    darkCopy: "Instead of adding hundreds of products, we make selection harder. Utility, weight, durability and real outdoor use are the filters behind JASTLIFE.",
-    finderTitle: "Where are you going?",
-    finderCopy: "Pick the scenario. We narrow the essentials.",
-    storyTitle: "Built for outside, not for shelves.",
-    storyCopy: "JASTLIFE sits between a store and a guide — product and content working together to help you choose better.",
-    read: "Read the story",
-    essentials: "Four JAST worlds",
-    waitTitle: "See Drop 01 first.",
-    waitCopy: "Only launches, useful guides and new selections.",
+    nav: [["Shop", "#edit"], ["Routes", "#route"], ["About", "#story"]],
+    eyebrow: "JASTLIFE / OUTDOOR GOODS / 2026",
+    title: "Carry less.\nLive more.",
+    desc: "Travel, camping, cycling and outdoor tech — selected for people who want to move lighter and live outside better.",
+    primary: "Explore the edit",
+    secondary: "Choose your route",
+    routeKicker: "JAST ROUTE / SMART DISCOVERY",
+    routeTitle: "Choose the route first.\nThen the gear.",
+    routeCopy: "Skip endless product grids. Start with the real situation. JAST Route narrows the essentials for each scenario.",
+    editTitle: "The JAST Edit",
+    editCopy: "Four starting points. No more.",
+    storyTitle: "Everything you carry should earn its weight.",
+    storyCopy: "JASTLIFE is not about owning more gear. It is about choosing better, moving lighter and experiencing more outside.",
+    worlds: "Four worlds. One standard.",
+    waitTitle: "See Drop 01 before everyone else.",
+    waitCopy: "Launches, useful guides and new selections. Short and useful.",
     email: "Your email",
-    join: "Join",
+    join: "Get early access",
     search: "Search JASTLIFE",
-    popular: "Quick suggestions",
-  }
+  },
 };
 
-const items = [
-  { id: 1, cat: "CAMP", fa: "چراغ کمپ ماژولار", en: "Modular Camp Light", type: "light", note: "DROP 01" },
-  { id: 2, cat: "TECH", fa: "پاور Outdoor", en: "Outdoor Power", type: "power", note: "JAST PICK" },
-  { id: 3, cat: "RIDE", fa: "کیت تعمیر فشرده", en: "Compact Repair Kit", type: "tool", note: "ESSENTIAL" },
-  { id: 4, cat: "EXPLORE", fa: "کوله روزانه 22L", en: "22L Day Pack", type: "pack", note: "LIGHTWEIGHT" },
-  { id: 5, cat: "EXPLORE", fa: "فیلتر آب فشرده", en: "Compact Water Filter", type: "bottle", note: "FIELD READY" },
-  { id: 6, cat: "TRAVEL", fa: "ارگانایزر سفر", en: "Travel Organizer", type: "case", note: "UTILITY" },
+const products = [
+  { id: 1, cat: "CAMP", fa: "چراغ کمپ ماژولار", en: "Modular Camp Light", note: "LIGHT / 01", type: "light" },
+  { id: 2, cat: "TECH", fa: "پاور Outdoor", en: "Outdoor Power", note: "POWER / 02", type: "power" },
+  { id: 3, cat: "RIDE", fa: "کیت تعمیر فشرده", en: "Compact Repair Kit", note: "REPAIR / 03", type: "tool" },
+  { id: 4, cat: "EXPLORE", fa: "کوله روزانه 22L", en: "22L Day Pack", note: "CARRY / 04", type: "pack" },
 ];
 
-const worlds = [
-  ["01", "CAMP", "کمپ", "Camping", "Sleep / Light / Shelter"],
-  ["02", "RIDE", "حرکت", "Ride", "Repair / Safety / Carry"],
-  ["03", "TECH", "تکنولوژی", "Tech", "Power / Nav / Smart"],
-  ["04", "EXPLORE", "طبیعت", "Explore", "Pack / Water / Utility"],
-];
+const routes = {
+  camp: { code: "CAMP / 24H", fa: "کمپ یک‌شبه", en: "One-night camp", stat: "05 essentials", itemsFa: ["نور قابل اتکا", "سیستم خواب", "پاور", "آب", "ابزار"], itemsEn: ["Reliable light", "Sleep system", "Power", "Water", "Tool"], path: "M18 172 C96 140 78 72 164 90 S276 164 342 92 S468 36 534 74" },
+  ride: { code: "RIDE / 80K", fa: "مسیر دوچرخه", en: "Long ride", stat: "05 essentials", itemsFa: ["چراغ ایمنی", "کیت تعمیر", "پمپ", "حمل سبک", "پاور"], itemsEn: ["Safety light", "Repair kit", "Pump", "Light carry", "Power"], path: "M18 150 C92 36 132 178 205 90 S316 42 370 126 S462 158 534 54" },
+  road: { code: "ROAD / 3D", fa: "سفر جاده‌ای", en: "Road trip", stat: "05 essentials", itemsFa: ["ارگانایزر", "پاور", "نور", "آب", "کوله روزانه"], itemsEn: ["Organizer", "Power", "Light", "Water", "Day pack"], path: "M18 134 C84 102 118 48 190 84 S284 180 352 112 S460 52 534 118" },
+  trail: { code: "TRAIL / DAY", fa: "طبیعت یک‌روزه", en: "Day trail", stat: "05 essentials", itemsFa: ["آب", "کوله", "نور", "مسیریابی", "ابزار سبک"], itemsEn: ["Water", "Pack", "Light", "Navigation", "Light tool"], path: "M18 164 C90 170 82 62 158 82 S270 174 328 100 S430 28 534 92" },
+};
 
-function Logo() {
-  return <svg className="logo" viewBox="0 0 64 64" aria-label="JASTLIFE"><path d="M43 10v24c0 14-7.5 21-19 21-7.8 0-13.2-3.6-16-10"/><path d="M34.5 18 43 8l8.5 10"/><path className="logoAccent" d="M42.8 8.4 48 14.7"/></svg>;
+function Logo({ large = false }) {
+  return <svg className={large ? "logo large" : "logo"} viewBox="0 0 64 64" aria-label="JASTLIFE"><path d="M43 10v24c0 14-7.5 21-19 21-7.8 0-13.2-3.6-16-10"/><path d="M34.5 18 43 8l8.5 10"/><path className="accent" d="M42.8 8.4 48 14.7"/></svg>;
 }
 
 function ProductArt({ type }) {
-  if (type === "pack") return <svg viewBox="0 0 200 200"><path d="M67 62c0-24 13-38 33-38s33 14 33 38"/><rect x="48" y="55" width="104" height="116" rx="31"/><path d="M68 89h64M76 126h48M62 76c-18 18-21 52-8 81M138 76c18 18 21 52 8 81"/></svg>;
-  if (type === "power") return <svg viewBox="0 0 200 200"><rect x="61" y="33" width="78" height="134" rx="22"/><path d="M85 21h30M77 70h46M81 135h38"/><circle cx="100" cy="102" r="17"/></svg>;
-  if (type === "bottle") return <svg viewBox="0 0 200 200"><path d="M81 27h38v27l13 19v79c0 11-9 20-20 20H88c-11 0-20-9-20-20V73l13-19V27Z"/><path d="M81 55h38M76 103h48"/></svg>;
-  if (type === "case") return <svg viewBox="0 0 200 200"><rect x="34" y="62" width="132" height="94" rx="23"/><path d="M72 62V46h56v16M34 101h132M100 88v27"/></svg>;
-  if (type === "tool") return <svg viewBox="0 0 200 200"><path d="M62 40c-20 19-21 51-2 71l-25 42 18 10 28-39c24 8 51-5 63-28 10-20 7-43-7-59l-23 40-27-16 24-40c-18-3-36 3-49 19Z"/></svg>;
-  return <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="54"/><circle cx="100" cy="100" r="20"/><path d="M100 20v27M100 153v27M20 100h27M153 100h27M44 44l19 19M137 137l19 19"/></svg>;
+  if (type === "pack") return <svg viewBox="0 0 220 220"><path d="M75 66c0-26 14-42 35-42s35 16 35 42"/><rect x="53" y="59" width="114" height="126" rx="34"/><path d="M75 96h70M84 137h52M68 82c-20 20-23 57-9 88M152 82c20 20 23 57 9 88"/></svg>;
+  if (type === "power") return <svg viewBox="0 0 220 220"><rect x="66" y="36" width="88" height="148" rx="25"/><path d="M93 24h34M84 78h52M89 150h42"/><circle cx="110" cy="111" r="19"/></svg>;
+  if (type === "tool") return <svg viewBox="0 0 220 220"><path d="M68 43c-22 21-23 56-2 78l-27 47 20 11 31-43c27 9 56-5 70-31 11-22 8-48-8-65l-26 44-30-17 26-44c-19-3-39 3-54 20Z"/></svg>;
+  return <svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="60"/><circle cx="110" cy="110" r="22"/><path d="M110 20v30M110 170v30M20 110h30M170 110h30M47 47l21 21M152 152l21 21"/></svg>;
 }
 
 export default function Home() {
@@ -90,9 +78,10 @@ export default function Home() {
   const [search, setSearch] = useState(false);
   const [query, setQuery] = useState("");
   const [saved, setSaved] = useState([]);
-  const [scenario, setScenario] = useState("camp");
+  const [route, setRoute] = useState("camp");
   const t = copy[lang];
   const rtl = lang === "fa";
+  const activeRoute = routes[route];
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -100,85 +89,71 @@ export default function Home() {
   }, [lang, rtl]);
 
   const filtered = useMemo(() => {
-    if (!query.trim()) return items.slice(0, 4);
+    if (!query.trim()) return products;
     const q = query.toLowerCase();
-    return items.filter(x => `${x.fa} ${x.en} ${x.cat}`.toLowerCase().includes(q));
+    return products.filter(p => `${p.fa} ${p.en} ${p.cat}`.toLowerCase().includes(q));
   }, [query]);
-
-  const lists = rtl ? {
-    camp: ["نور قابل اتکا", "سیستم خواب", "پاور", "آب", "ابزار چندکاره"],
-    ride: ["چراغ ایمنی", "کیت تعمیر", "پمپ", "حمل سبک", "پاور"],
-    road: ["ارگانایزر", "پاور", "چراغ", "آب", "کوله روزانه"],
-    trail: ["آب", "کوله", "نور", "مسیریابی", "ابزار سبک"],
-  } : {
-    camp: ["Reliable light", "Sleep system", "Power", "Water", "Multi tool"],
-    ride: ["Safety light", "Repair kit", "Pump", "Light carry", "Power"],
-    road: ["Organizer", "Power", "Light", "Water", "Day pack"],
-    trail: ["Water", "Pack", "Light", "Navigation", "Light tools"],
-  };
 
   const toggleSave = id => setSaved(s => s.includes(id) ? s.filter(x => x !== id) : [...s, id]);
 
   return <main className="site" dir={rtl ? "rtl" : "ltr"}>
-    <header className="nav shell">
-      <a className="brand" href="#top"><span className="logoBox"><Logo/></span><strong>JASTLIFE</strong></a>
-      <nav className="desktopNav">{t.nav.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</nav>
-      <div className="navActions">
-        <button onClick={() => setSearch(true)} aria-label="Search" className="circleBtn">⌕</button>
-        <button aria-label="Saved" className="circleBtn savedIcon">♡{saved.length > 0 && <i>{saved.length}</i>}</button>
-        <button className="lang" onClick={() => setLang(lang === "fa" ? "en" : "fa")}>{lang === "fa" ? "EN" : "FA"}</button>
-        <button className="menuBtn" onClick={() => setMenu(!menu)}>{menu ? "×" : "☰"}</button>
-      </div>
-    </header>
-    {menu && <div className="mobileNav">{t.nav.map(([label, href]) => <a href={href} onClick={() => setMenu(false)} key={href}>{label}<span>↗</span></a>)}</div>}
-
     <section className="hero" id="top">
-      <div className="shell heroGrid">
-        <div className="heroCopy">
-          <span className="eyebrow">{t.eyebrow}</span>
-          <h1>{t.title.split("\n").map((line, i) => <span key={i}>{line}</span>)}</h1>
-          <p>{t.desc}</p>
-          <div className="heroActions"><a className="blackBtn" href="#shop">{t.shop}<span>↗</span></a><a className="plainLink" href="#finder">{t.finder}<span>→</span></a></div>
+      <div className="heroBg"/><div className="heroFade"/>
+      <header className="nav shell">
+        <a href="#top" className="brand"><span className="mark"><Logo/></span><strong>JASTLIFE</strong></a>
+        <nav>{t.nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</nav>
+        <div className="navTools"><button onClick={() => setSearch(true)} aria-label="Search">⌕</button><button className="saveTop" aria-label="Saved">♡{saved.length > 0 && <i>{saved.length}</i>}</button><button className="lang" onClick={() => setLang(lang === "fa" ? "en" : "fa")}>{lang === "fa" ? "EN" : "FA"}</button><button className="menu" onClick={() => setMenu(!menu)}>{menu ? "×" : "☰"}</button></div>
+      </header>
+      {menu && <div className="mobileMenu">{t.nav.map(([label, href]) => <a href={href} key={href} onClick={() => setMenu(false)}>{label}<span>↗</span></a>)}</div>}
+      <div className="heroContent shell">
+        <div className="heroText"><span className="eyebrow">{t.eyebrow}</span><h1>{t.title.split("\n").map((line, i) => <span key={i}>{line}</span>)}</h1><p>{t.desc}</p><div className="heroActions"><a href="#edit" className="primary">{t.primary}<span>↗</span></a><a href="#route" className="secondary">{t.secondary}<span>↓</span></a></div></div>
+        <div className="heroMeta"><span>35.6892° N</span><span>FIELD SYSTEM / J-26</span></div>
+      </div>
+      <div className="scrollCue"><span>SCROLL TO EXPLORE</span><i/></div>
+    </section>
+
+    <section className="worlds shell">
+      {["CAMP","RIDE","TECH","EXPLORE"].map((w,i) => <a href="#edit" key={w}><span>0{i+1}</span><strong>{w}</strong><i>↗</i></a>)}
+    </section>
+
+    <section className="intro section">
+      <div className="shell introGrid"><span className="sectionNo">01 / JASTLIFE</span><h2>{rtl ? "فروشگاه نیست؛ یک فیلتر برای انتخاب بهتر است." : "Not just a store. A filter for better choices."}</h2><p>{rtl ? "محصول کمتر، دلیل بیشتر. هر انتخاب باید در دنیای واقعی بیرون معنی داشته باشد." : "Fewer products, stronger reasons. Every pick should make sense outside in the real world."}</p></div>
+    </section>
+
+    <section className="edit section" id="edit">
+      <div className="shell sectionHead"><div><span className="sectionNo">02 / DROP 01</span><h2>{t.editTitle}</h2></div><p>{t.editCopy}</p></div>
+      <div className="shell editGrid">
+        {products.map((p, i) => <article className={`product product${i+1}`} key={p.id}>
+          <div className="productCanvas"><span>{p.note}</span><button className={saved.includes(p.id) ? "heart active" : "heart"} onClick={() => toggleSave(p.id)} aria-label="Save">{saved.includes(p.id) ? "♥" : "♡"}</button><ProductArt type={p.type}/><b>0{i+1}</b></div>
+          <div className="productCopy"><small>{p.cat}</small><h3>{rtl ? p.fa : p.en}</h3><a href="#waitlist">{rtl ? "مشاهده" : "View"} <span>↗</span></a></div>
+        </article>)}
+      </div>
+    </section>
+
+    <section className="route section" id="route">
+      <div className="shell routeGrid">
+        <div className="routeIntro"><span className="sectionNo light">03 / {t.routeKicker}</span><h2>{t.routeTitle.split("\n").map((l,i)=><span key={i}>{l}</span>)}</h2><p>{t.routeCopy}</p></div>
+        <div className="routeStage">
+          <div className="routeTabs">{Object.entries(routes).map(([key,r]) => <button key={key} className={route === key ? "active" : ""} onClick={() => setRoute(key)}><small>{r.code}</small><strong>{rtl ? r.fa : r.en}</strong></button>)}</div>
+          <div className="routeVisual">
+            <div className="routeVisualTop"><span>{activeRoute.code}</span><b>{activeRoute.stat}</b></div>
+            <svg viewBox="0 0 552 210" preserveAspectRatio="none"><path className="routeGhost" d="M18 105 H534"/><path className="routePath" d={activeRoute.path}/><circle cx="18" cy="172" r="5"/><circle cx="534" cy="74" r="7"/></svg>
+            <div className="routeLabels"><span>START</span><span>GO FAR</span></div>
+          </div>
+          <div className="gearList">{(rtl ? activeRoute.itemsFa : activeRoute.itemsEn).map((item,i)=><div key={item}><span>0{i+1}</span><strong>{item}</strong><i>✓</i></div>)}</div>
+          <a href="#edit" className="routeCta">{rtl ? "دیدن انتخاب‌های مرتبط" : "See relevant picks"}<span>↗</span></a>
         </div>
-        <div className="heroMedia"><div className="heroImage"/><span className="mediaIndex">J / 001</span><span className="mediaCaption">MOVE LIGHT — GO FAR</span></div>
       </div>
     </section>
 
-    <section className="categoryBand shell" id="shop">
-      <div className="bandTitle"><span>{t.categories}</span><small>01 — 04</small></div>
-      <div className="worldRail">{worlds.map(w => <a href="#products" className="world" key={w[1]}><span>{w[0]}</span><div><b>{rtl ? w[2] : w[3]}</b><small>{w[1]}</small></div><i>↗</i></a>)}</div>
-    </section>
+    <section className="story" id="story"><div className="storyBg"/><div className="storyShade"/><div className="shell storyContent"><span>04 / FIELD PRINCIPLE</span><Logo large/><h2>{t.storyTitle}</h2><p>{t.storyCopy}</p><div className="storyLine"><span>PACK LESS</span><i/><span>EXPERIENCE MORE</span></div></div></section>
 
-    <section className="products section" id="products">
-      <div className="shell">
-        <div className="sectionTop"><div><span className="sectionNo">01 / DROP 01</span><h2>{t.new}</h2></div><p>{t.newSub}</p></div>
-        <div className="productGrid">{items.slice(0,4).map((item, i) => <article className="product" key={item.id}>
-          <div className="productArt"><span className="productNote">{item.note}</span><button onClick={() => toggleSave(item.id)} className={`heart ${saved.includes(item.id) ? "active" : ""}`}>{saved.includes(item.id) ? "♥" : "♡"}</button><ProductArt type={item.type}/><small>0{i+1}</small></div>
-          <div className="productMeta"><div><span>{item.cat}</span><h3>{rtl ? item.fa : item.en}</h3></div><i>↗</i></div>
-        </article>)}</div>
-      </div>
-    </section>
+    <section className="finalEdit section"><div className="shell finalGrid"><div><span className="sectionNo">05 / WORLDS</span><h2>{t.worlds}</h2></div><div className="worldCards">{[["CAMP","Sleep / Light / Shelter"],["RIDE","Repair / Safety / Carry"],["TECH","Power / Navigation / Smart"],["EXPLORE","Pack / Water / Utility"]].map((w,i)=><a href="#edit" key={w[0]}><span>0{i+1}</span><div><strong>{w[0]}</strong><small>{w[1]}</small></div><i>↗</i></a>)}</div></div></section>
 
-    <section className="manifesto">
-      <div className="shell manifestoGrid"><div className="manifestMark"><Logo/></div><div><span className="sectionNo light">02 / JAST STANDARD</span><h2>{t.darkTitle}</h2><p>{t.darkCopy}</p><a href="#finder">JAST METHOD <span>↗</span></a></div></div>
-    </section>
+    <section className="wait" id="waitlist"><div className="shell waitGrid"><div><span>DROP 01 / EARLY ACCESS</span><h2>{t.waitTitle}</h2><p>{t.waitCopy}</p></div><form onSubmit={e=>e.preventDefault()}><input type="email" required placeholder={t.email}/><button>{t.join}<span>↗</span></button></form></div></section>
 
-    <section className="finder section" id="finder">
-      <div className="shell finderGrid"><div className="finderIntro"><span className="sectionNo">03 / SMART FINDER</span><h2>{t.finderTitle}</h2><p>{t.finderCopy}</p></div><div className="finderBox">
-        <div className="finderTabs">{[["camp", rtl?"کمپ یک‌شبه":"One-night camp"],["ride",rtl?"دوچرخه":"Ride"],["road",rtl?"سفر جاده‌ای":"Road trip"],["trail",rtl?"طبیعت یک‌روزه":"Day trail"]].map(([key,label]) => <button className={scenario===key?"active":""} onClick={() => setScenario(key)} key={key}>{label}</button>)}</div>
-        <div className="finderList">{lists[scenario].map((x,i)=><div key={x}><span>0{i+1}</span><strong>{x}</strong><i>✓</i></div>)}</div>
-        <a href="#products" className="finderAction">{rtl?"دیدن انتخاب‌های مرتبط":"See relevant picks"}<span>↗</span></a>
-      </div></div>
-    </section>
+    <footer><div className="shell footerTop"><a href="#top" className="brand"><span className="mark dark"><Logo/></span><strong>JASTLIFE</strong></a><span>GO OUTSIDE. LIVE MORE.</span><span>© 2026 / JASTLIFE</span></div><div className="footerWord">JASTLIFE</div></footer>
 
-    <section className="story" id="story"><div className="storyImage"/><div className="storyShade"/><div className="shell storyInner"><span>04 / FIELD NOTES</span><h2>{t.storyTitle}</h2><p>{t.storyCopy}</p><a href="#waitlist">{t.read}<span>↗</span></a></div></section>
-
-    <section className="essentials section"><div className="shell"><div className="sectionTop"><div><span className="sectionNo">05 / WORLDS</span><h2>{t.essentials}</h2></div></div><div className="essentialGrid">{worlds.map(w=><article key={w[1]}><span>{w[0]}</span><h3>{rtl?w[2]:w[3]}</h3><p>{w[4]}</p><i>↗</i></article>)}</div></div></section>
-
-    <section className="wait" id="waitlist"><div className="shell waitGrid"><div><span className="sectionNo light">DROP 01 / EARLY ACCESS</span><h2>{t.waitTitle}</h2><p>{t.waitCopy}</p></div><form onSubmit={e=>e.preventDefault()}><div><input type="email" required placeholder={t.email}/><button>{t.join}<span>↗</span></button></div><small>{rtl?"بدون اسپم. فقط چیزهای مهم.":"No spam. Only the important stuff."}</small></form></div></section>
-
-    <footer><div className="shell footerTop"><a className="brand footerBrand" href="#top"><span className="logoBox"><Logo/></span><strong>JASTLIFE</strong></a><div className="footerLinks"><a href="#shop">SHOP</a><a href="#finder">FINDER</a><a href="#story">STORY</a></div><span>GO OUTSIDE. LIVE MORE.</span></div><div className="shell footerWord">JASTLIFE</div><div className="shell footerBottom"><span>© 2026 JASTLIFE</span><span>OUTDOOR / GEAR / TECH</span></div></footer>
-
-    {search && <div className="searchOverlay"><div className="searchPanel"><div className="searchHead"><strong>{t.search}</strong><button onClick={() => {setSearch(false);setQuery("")}}>×</button></div><div className="searchField"><span>⌕</span><input autoFocus value={query} onChange={e=>setQuery(e.target.value)} placeholder={t.search}/></div><span className="searchLabel">{t.popular}</span><div className="searchResults">{filtered.map(item=><a href="#products" onClick={()=>setSearch(false)} key={item.id}><div className="miniArt"><ProductArt type={item.type}/></div><div><small>{item.cat}</small><strong>{rtl?item.fa:item.en}</strong></div><span>↗</span></a>)}</div></div></div>}
+    {search && <div className="searchOverlay"><button className="closeSearch" onClick={() => setSearch(false)}>×</button><div className="searchInner"><span>SEARCH / JASTLIFE</span><div className="searchField"><i>⌕</i><input autoFocus value={query} onChange={e=>setQuery(e.target.value)} placeholder={t.search}/></div><div className="searchResults">{filtered.map(p=><a href="#edit" onClick={()=>setSearch(false)} key={p.id}><small>{p.cat}</small><strong>{rtl?p.fa:p.en}</strong><span>↗</span></a>)}</div></div></div>}
   </main>;
 }

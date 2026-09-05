@@ -1,26 +1,26 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "JASTLIFE | Outdoor Gear, Camping, Cycling & Smart Tech",
-  description: "JASTLIFE curates outdoor gear, camping essentials, cycling equipment and smart tools built for movement, travel and life outside.",
-  keywords: ["JASTLIFE", "outdoor gear", "camping", "cycling", "smart gadgets", "travel gear"],
+  title: "JASTLIFE | Curated Outdoor Gear",
+  description: "JASTLIFE curates camping, cycling, travel and outdoor tech for lighter movement and better time outside.",
+  keywords: ["JASTLIFE", "outdoor gear", "camping", "cycling", "travel gear", "outdoor tech"],
   openGraph: {
-    title: "JASTLIFE | Go Outside. Live More.",
-    description: "Curated outdoor gear, camping, cycling and smart tech for people who move.",
+    title: "JASTLIFE | Carry Less. Live More.",
+    description: "Curated outdoor gear for people who move lighter and live outside better.",
     type: "website",
     images: ["/hero.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JASTLIFE | Go Outside. Live More.",
-    description: "Curated outdoor gear, camping, cycling and smart tech for people who move.",
+    title: "JASTLIFE | Carry Less. Live More.",
+    description: "Curated outdoor gear for people who move lighter and live outside better.",
     images: ["/hero.png"],
   },
 };
 
 export const viewport = {
-  themeColor: "#05070a",
-  colorScheme: "dark",
+  themeColor: "#f3f1ec",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }) {

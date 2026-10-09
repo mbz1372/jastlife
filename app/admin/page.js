@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import StoreHeader from "../components/StoreHeader";
 import { formatPrice } from "../../lib/catalog";
+import DigikalaImageReview from "./DigikalaImageReview";
 
 const emptyForm = {
   name: "", slug: "", category: "کمپ", subtitle: "", description: "", price: "", compare_at_price: "", stock: "", badge: "", type: "case", image_url: "", active: true,
@@ -91,7 +92,7 @@ export default function AdminPage() {
           <button className="primaryButton adminSave" disabled={saving}>{saving ? "در حال ذخیره..." : "ثبت محصول"}</button>
           {status ? <div className="adminStatus">{status}</div> : null}
         </form>
-        <aside className="adminProducts"><div className="adminListHead"><h2>محصولات</h2><span>{products.length}</span></div>{products.map((product) => <div className="adminProduct" key={product.id}><div><strong>{product.name}</strong><small>{product.category} · {product.stock} موجود</small></div><div><b>{formatPrice(product.price)}</b><Link href={`/product/${product.slug}`}>مشاهده ↗</Link></div></div>)}</aside>
+        <aside className="adminProducts"><div className="adminListHead"><h2>محصولات</h2><span>{products.length}</span></div>{products.map((product) => <div className="adminProduct" key={product.id}><div><strong>{product.name}</strong><small>{product.category} · {product.stock} موجود</small></div><div><b>{formatPrice(product.price)}</b><Link href={`/product/${product.slug}`}>مشاهده ↗</Link><DigikalaImageReview product={product} adminKey={adminKey} onApplied={load}/></div></div>)}</aside>
       </div>
     </section>
   </main>;
